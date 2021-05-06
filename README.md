@@ -7,7 +7,7 @@
 Dva Toolkit 是为了给 Dva 社区带来 @redux/toolkit 一样的体验而诞生的强类型支持工具，提供自然且良好的类型推断体验，可以在大多数情况下省去类型声明，除了 Payload 部分必须使用 PayloadAction 声明。
 
 ```typescript
-const { model, action: { add, addDelay }， initState } = createDvaSlice({
+const { model, action: { add, addDelay }, initState } = createDvaSlice({
   namespace: 'count',
   state: 0,
   reducers: {
@@ -68,6 +68,16 @@ action 中的函数是用来生成 `{payload: ..., type}` 对象的，你还需�
 
 ```typescript
 dispatch(add(1))
+```
+
+## 与 UMI 一起使用
+
+umi3 中新加入了验证 dva model 写的对不对的操作，居然是直接用 babel 静态分析。成功让本项目的写法不被理解。需要配置文件里关掉这个设置。未来会贡献 umi dva 的插件让他支持一下。
+
+```js
+  dva: {
+    skipModelValidate: true
+  }
 ```
 
 ## 开发者的话
