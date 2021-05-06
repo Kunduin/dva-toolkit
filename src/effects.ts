@@ -3,7 +3,7 @@ import type { call, put, take, select, cancel } from 'redux-saga/effects'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 /**
- * dva 支持的 saga command 列表
+ * saga effects supported by dva
  *
  * @public
  */
@@ -17,7 +17,7 @@ export type SagaEffectsCommandMap = {
 }
 
 /**
- * effect 方法
+ * pure effect method
  *
  * @public
  */
@@ -25,17 +25,22 @@ export type DvaCaseEffects =
   (action: PayloadAction<any>, effects: SagaEffectsCommandMap) => Generator
 
 /**
- * 有 effect 类型的 effect 方法
+ * effect with saga config
  *
  * @public
  */
 export type DvaCaseEffectWithType =
   [DvaCaseEffects, {type: EffectType}]
 
+/**
+ * all effect case
+ *
+ * @public
+ */
 export type DvaCaseEffectValue = DvaCaseEffects | DvaCaseEffectWithType
 
 /**
- * dva 配置中 effects 列表的类型
+ * effects in dva config
  *
  * @public
  */

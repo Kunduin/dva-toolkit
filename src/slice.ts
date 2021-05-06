@@ -40,6 +40,11 @@ export type CreateDvaSliceOption<
   subscriptions?: SubscriptionsMapObject,
 }
 
+/**
+ * dva slice result, `model` is dva model, `action` is typed action generator
+ *
+ * @public
+ */
 export type DvaSlice<
   State = any,
   CR extends DvaSliceCaseReducers<State> = DvaSliceCaseReducers<State>,

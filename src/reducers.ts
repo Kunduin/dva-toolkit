@@ -37,7 +37,7 @@ export type DvaSliceCaseReducers<
 > = DvaReducersWithEnhancer<S, Reducers> | Reducers
 
 /**
- * 没看懂，但加上去就对了
+ * valid dva reducers case
  *
  * TODO: try to understand this func
  */

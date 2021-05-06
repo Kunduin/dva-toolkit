@@ -16,7 +16,7 @@ export type ActionCreatorDvaCaseReducer<R> =
     : ActionCreatorWithoutPayload
 
 /**
- * dva action need
+ * dva reducer actions creator
  *
  * @public
  */
@@ -25,7 +25,7 @@ export type ActionCreatorDvaReducers<Reducers extends DvaReducers> = {
 }
 
 /**
- * dva
+ * dva reducer actions
  *
  * @public
  */
@@ -35,6 +35,11 @@ export type DvaReducersAction<
   ? ActionCreatorDvaReducers<Reducers>
   : never
 
+/**
+ * dva effects actions creator
+ *
+ * @public
+ */
 export type ActionCreatorDvaEffect<E> =
   E extends (action: infer Action, effects: any) => any
     ? Action extends { payload: infer P }
@@ -42,6 +47,11 @@ export type ActionCreatorDvaEffect<E> =
       : ActionCreatorWithoutPayload
     : ActionCreatorWithoutPayload
 
+/**
+ * dva effects actions
+ *
+ * @public
+ */
 export type DvaEffectsAction<
   CE extends DvaSliceCaseEffects
 > = {
@@ -50,6 +60,11 @@ export type DvaEffectsAction<
     : ActionCreatorDvaEffect<CE[Type]>
 }
 
+/**
+ * dva actions
+ *
+ * @public
+ */
 export type DvaCaseAction<
   CR extends DvaSliceCaseReducers<any>,
   CE extends DvaSliceCaseEffects
