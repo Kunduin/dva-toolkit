@@ -27,6 +27,17 @@
   },
   "name": "dva-toolkit",
   "author": "Bay",
+  "description": "A great dva typescript support toolkit inspired by @redux/toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kunduin/dva-toolkit"
+  },
+  "keywords": [
+    "dva",
+    "redux",
+    "redux-saga",
+    "tool"
+  ],
   "module": "dist/dva-toolkit.esm.js",
   "size-limit": [
     {
