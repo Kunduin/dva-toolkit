@@ -31,7 +31,8 @@ export function createDvaSlice <
 
   return {
     model: options as Model,
-    action: actionCreators as any
+    action: actionCreators as any,
+    initState: options.state
   }
 }
 

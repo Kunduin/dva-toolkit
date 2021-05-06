@@ -59,4 +59,9 @@ export type DvaSlice<
    * generated actions
    */
   action: DvaCaseAction<CR, CE>
+
+  /**
+   * init state, won't change, only used for type deduce
+   */
+  initState?: State
 }
