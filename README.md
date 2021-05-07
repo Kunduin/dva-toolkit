@@ -49,7 +49,7 @@ yarn add dva-toolkit
 
 ```typescript
 const { initState } = createDvaSlice({...})
-type IState = typeof initState
+type IState = NonNullable<typeof initState>
 ```
 
 目前 `createDvaSlice` 函数的返回对象只有 `model`、 `action`、`initState` 属性。`model` 是直接注入 dva 中的对象，action 包含所有生成 action 的函数。 initState 属性则是只用来类型推断，永远不会变化的初始状态。
