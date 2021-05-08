@@ -1,8 +1,9 @@
 # Dva Toolkit
 
-![](https://img.shields.io/bundlephobia/min/dva-toolkit) 
+![](https://img.shields.io/github/workflow/status/kunduin/dva-toolkit/CI)
 ![](https://img.shields.io/npm/v/dva-toolkit)
 ![](https://img.shields.io/npm/l/dva-toolkit)
+![](https://img.shields.io/bundlephobia/min/dva-toolkit) 
 
 Dva Toolkit 是为了给 Dva 社区带来 @redux/toolkit 一样的体验而诞生的强类型支持工具，提供自然且良好的类型推断体验，可以在大多数情况下省去类型声明，除了 Payload 部分必须使用 PayloadAction 声明。
 
